@@ -1,0 +1,56 @@
+I am ready to complete **Phase 3: Gamification & Profiles** for my project “Footwork Training – Goal 90”.
+
+Please implement everything required in this phase so that the app now supports progress tracking, rewards, and profile features across sessions.
+
+✅ Requirements
+
+1. **Profile Page (Gamified Dashboard)**
+   - Show total modules completed, total lessons completed, total points earned, and current streak.
+   - Add a “Badges” section that visually displays earned rewards (e.g. bronze, silver, gold).
+   - Include “Achievements” for milestones like:
+     - “First Lesson Completed”
+     - “First Module Completed”
+     - “7-Day Streak”
+   - Display a progress summary for each module (progress bar + percent complete).
+   - All stats should update automatically based on lesson completions.
+
+2. **Points System**
+   - Each lesson completion = +10 points.
+   - Completing a module = +50 bonus points.
+   - Display the updated total points immediately on the profile page.
+
+3. **Badges System**
+   - Award badges automatically based on progress:
+     - “Rising Star” = Complete 1 module
+     - “Dedicated Player” = Reach 100 points
+     - “Footwork Master” = Complete all 5 modules
+   - Show badge icons and labels in the “Badges” section of the profile.
+
+4. **Backend Sync for Progress**
+   - Store user progress (lessons completed, modules completed, total points, and badges) in the backend so that it persists across sessions.
+   - When a user logs in, fetch progress data from the backend and display it in the Profile page.
+   - When a user finishes a lesson or module, send an API update to sync progress.
+
+5. **Lesson Progress Tracking**
+   - When a user watches a lesson video in `/modules/:id`, mark it as “completed” when it finishes playing.
+   - Show a small “✓ Completed” label on that lesson.
+   - Update the progress bar for that module and the user’s total points in real time.
+
+6. **UI Enhancements**
+   - Use consistent white text on dark backgrounds.
+   - Add light animation when a badge or achievement is unlocked.
+   - Ensure responsive design for phones, tablets, and desktop preview.
+
+7. **Files to Update**
+   - `src/pages/Profile.tsx` → Add stats, rewards, badges, and module progress list.
+   - `src/pages/ModuleDetail.tsx` → Handle video playback completion + progress update.
+   - `src/components/BadgeCard.tsx` → New component for displaying badges.
+   - `src/api/progress.ts` → Functions for saving/fetching user progress.
+   - `src/context/UserContext.tsx` → Track current user points & progress globally.
+
+8. **Testing**
+   - Add mock backend or JSON data if no real API exists yet, so that I can see points and badges working visually.
+   - Verify that logging in as `player / goal90` shows persistent progress after page refresh.
+
+🎯 Goal:  
+After this step, the Profile page should feel complete — showing points, badges, achievements, and progress that persist when I log out and back in. The Module pages should now update that progress when lessons are completed.
