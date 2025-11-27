@@ -1,0 +1,16 @@
+{
+	"appId": "com.goal90.training",
+	"appName": "Goal 90",
+	"webDir": "dist/public",
+	"server": {
+		"androidScheme": "https",
+		"iosScheme": "https"
+	},
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 2000,
+			"backgroundColor": "#000000",
+			"showSpinner": false
+		}
+	}
+}
